@@ -1,0 +1,73 @@
+---
+title: "Aula 3 - RMarkdown"
+author: "Roger"
+date: "2026-08-28"
+output: 
+  html_document:
+    theme: journal
+    toc: true
+    toc_float:
+      collapsed: true
+      # smooth_scroll: false
+      position: left
+      width: 250px
+---
+
+# Títulos Markdown
+## Título nível 2 `##`
+### Título nível 3 `###`
+
+<hr/>
+
+# Formatação de texto
+- Palavras em **negrito** entre dois asteriscos `**`
+- Palavras em *italico* entre um asterisco `*`
+- Palavras ~~riscadas~~ entre dois tios `~~`
+- Códigos em linha entre crases `
+
+<hr/>
+
+# Listas
+## Não ordenada
+Utiliza-se o símbolo `-`, mas pode usar `*` ou `+`
+
+- Item 1
+- Item 2
+* Item 3
++ Item 4
+  - Sub-item
+    - Sub-item
+    
+## Ordenada
+1. Item
+2. Item
+3. Item
+  - 3.1. Sub-item
+
+<hr/>
+
+# Blocos de código `{r}`
+
+- `echo = TRUE` mostra o código padrão e
+`echo = FALSE` mostra apenas os resultados
+
+- `message = TRUE` mostra mensagens e
+`message = FALSE` oculta mensagens
+
+- `warning = TRUE` mostra avisos e
+`warning = FALSE` oculta avisos
+
+- `eval = TRUE` mostra os resultados + código e
+`eval = FALSE` mostra só o código
+
+## Opções padrão do documento
+
+``` {r, eval=T}
+  knitr::opts_chunk$set(echo = T, message = F, warning = F, eval = T)
+```
+
+## Exemplo de código
+
+``` {r}
+  summary(iris$Sepal.Length)
+```

@@ -19,7 +19,7 @@ setwd("Dados/Limpos")
 setwd("../..")
 setwd("..")
 # Definir diretório do projeto
-projeto_dir <- "C:/Users/Usuario/Downloads/r-aulas"
+projeto_dir <- "C:/Users/aluno/Documents/r-aulas"
 setwd(projeto_dir)
 # Importar dados em csv
 ?read.csv
