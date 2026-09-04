@@ -51,14 +51,14 @@ Utiliza-se o símbolo `-`, mas pode usar `*` ou `+`
 - `echo = TRUE` mostra o código padrão e
 `echo = FALSE` mostra apenas os resultados
 
+- `eval = TRUE` mostra os resultados + código e
+`eval = FALSE` mostra só o código
+
 - `message = TRUE` mostra mensagens e
 `message = FALSE` oculta mensagens
 
 - `warning = TRUE` mostra avisos e
 `warning = FALSE` oculta avisos
-
-- `eval = TRUE` mostra os resultados + código e
-`eval = FALSE` mostra só o código
 
 ## Opções padrão do documento
 
