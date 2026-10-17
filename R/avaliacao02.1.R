@@ -1,4 +1,5 @@
 # Exercícios práticos sobre o pacote dplyr
+# Aluno: Pedro Vitor Carvalho Ferreira da Silva
 
 data <- iris
 
@@ -76,15 +77,13 @@ head(data_s)
 data_m <- data %>%
   mutate(Petal.Area = Petal.Length * Petal.Width)
 
-summary(data_m)
-
 ### A)
+summary(data_m)
 ### O menor e o maior valor de área de pétala são,
 ### respectivamente, 0.11 mm^2 e 15.87 mm^2.
 
-boxplot(data_m$Petal.Area~data_m$Species)
-
 ### B)
+boxplot(data_m$Petal.Area~data_m$Species)
 ### As espécies que possuem, em mediana, menor e maior
 ### áreas de pétala são, respectivamente, "setosa" e 
 ### "virginica".
@@ -121,5 +120,26 @@ dados <- data %>%
 
 ## Questão 09:
 
+### A)
+data %>%
+  group_by(Species) %>%
+  summarise(Largura_media = mean(Petal.Width, na.rm=T)) %>%
+  arrange(desc(Largura_media))
+### As espécies com maior e menor larguras médias de 
+### pétala são, respectivamente, "virginica" e 
+### "setosa".
 
+### B)
+table(data$Species)
+### Foram medidas 50 flores em cada espécie.
 
+#----------------------------------------------------#
+
+## Questão 10:
+
+library(tidyr)
+
+data_l <- data %>%
+  pivot_longer(cols = Sepal.Length:Petal.Width, 
+               names_to = "Var_morfometrica",
+               values_to = "Valor_mm")
