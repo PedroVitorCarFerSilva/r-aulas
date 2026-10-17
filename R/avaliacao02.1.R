@@ -40,6 +40,8 @@ data[data$Sepal.Width <= 3 & data$Petal.Width > 2, ]
 
 ## Questão 04:
 
+library(dplyr)
+
 ### A)
 data_f <- data %>%
   filter(Species == "versicolor")
@@ -123,11 +125,11 @@ dados <- data %>%
 ### A)
 data %>%
   group_by(Species) %>%
-  summarise(Largura_media = mean(Petal.Width, na.rm=T)) %>%
+  summarise(Largura_media = mean(Petal.Width)) %>%
   arrange(desc(Largura_media))
 ### As espécies com maior e menor larguras médias de 
-### pétala são, respectivamente, "virginica" e 
-### "setosa".
+### pétala são "virginica" e "setosa", respectivamen-
+### te.
 
 ### B)
 table(data$Species)
